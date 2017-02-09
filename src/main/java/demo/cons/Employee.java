@@ -1,9 +1,20 @@
 package demo.cons;
 
+import demo.Address;
+
 public class Employee {
     private int id;
     private String name;
-    private String city;
+    private Address address;
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address=" + address.toString() +
+                '}';
+    }
 
     public int getId() {
         return id;
@@ -21,20 +32,11 @@ public class Employee {
         this.name = name;
     }
 
-    public String getCity() {
-        return city;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", city='" + city + '\'' +
-                '}';
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }

@@ -20,6 +20,17 @@
         </constructor-arg>
     </bean>
 
+    <bean id="studentBean1" class="demo.Student">
+        <constructor-arg index="0" name="name" value="mkp246" type="java.lang.String"></constructor-arg>
+        <constructor-arg value="10" name="id" type="int"></constructor-arg>
+    </bean>
+
+    <bean id="studentBean2" class="demo.Student" parent="studentBean1">
+        <constructor-arg>
+            <ref bean="addressBean"/>
+        </constructor-arg>
+    </bean>
+
     <bean id="q1" class="demo.Question">
         <constructor-arg value="1"></constructor-arg>
         <constructor-arg value="whats java?"></constructor-arg>

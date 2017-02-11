@@ -5,6 +5,19 @@ public class Employee {
     private String name;
     private float salary;
 
+    public Employee() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
+
     public Employee(int id, String name, float salary) {
         this.id = id;
         this.name = name;
